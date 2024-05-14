@@ -1,0 +1,20 @@
+{
+  "name": "metrics",
+  "version": "0.0.1",
+  "description": "A simple mertrics library for extracting performance metrics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register test/**/*-test.spec.ts --timeout 0 -u bdd --colors --require  --exit"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "^4.3.16",
+    "@types/mocha": "^10.0.6",
+    "chai": "^5.1.1",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  }
+}
