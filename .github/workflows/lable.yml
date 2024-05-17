@@ -1,4 +1,3 @@
-  
 # This workflow will triage pull requests and apply a label based on the
 # paths that are modified in the pull request.
 #
@@ -7,10 +6,10 @@
 # https://github.com/actions/labeler
 
 name: Babu Chipkae
-on: 
+on:
   pull_request:
     branches:
-      - '**'
+      - "**"
   issues:
     types:
       - reopened
@@ -19,13 +18,19 @@ on:
 jobs:
   label:
     runs-on: ubuntu-latest
-    permissions: write-all
+    permissions:
+        contents: read
+        pull-requests: write
+
     steps:
-    - uses: actions/labeler@v5
-      with:
-        repo-token: "${{ secrets.GITHUB_TOKEN }}"
+      - uses: actions/labeler@v5
+        with:
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          sync-labels: true
+
   # add a triage label to newly created issues.
   label_issues:
+    if: github.event_name == 'issues' && (github.event.action == 'opened' || github.event.action == 'reopened')
     runs-on: ubuntu-latest
     permissions:
       issues: write
