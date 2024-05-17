@@ -20,21 +20,20 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          name: Install dependcies
-          command: npm install
-      - run:
           name: Build project
           command: npm run compile
   
   test:
     executor: node/default
+    parameters:
+      node-version:
+        type: string
     steps:
       - checkout
+      - node/install:
+          node-version: << parameters.node-version >>
       - node/install-packages:
           pkg-manager: npm
-      - run:
-          name: Install dependcies
-          command: npm install
       - run:
           name: Run tests
           command: npm test
@@ -45,6 +44,9 @@ workflows:
       jobs:
       - build
       - test:
+          matrix:
+            parameters:
+              node-version: ["14.x", "16.x","lts"]
           requires:
             - build
           filters:
