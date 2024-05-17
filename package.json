@@ -6,8 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "test": "jest --config=jest.config.ts",
-    "compile": "tsc -p ./tsconfig.json",
-    "ts-test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' && mocha -r ts-node/register 'tests/**/*-test.spec.ts'"
+    "compile": "tsc -p ./tsconfig.json"
   },
   "author": "",
   "license": "ISC",

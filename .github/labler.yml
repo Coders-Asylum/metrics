@@ -1,0 +1,39 @@
+🛠️ cicd:
+  - .github/*
+  - .github/**/*
+  - .ci/**/*
+  - .pipelines/**/*
+  - .circleci/**/*
+
+🗄️docs:
+  - docs/**/*
+  - readMe.md
+  - ReadMe.md
+  - readme.md
+  - README.md
+  - README
+
+⛏️ tool:
+  - tool/**/*
+  - eslintrc.json
+
+🧪 test:
+  - test/*
+  - test/**/*
+  - jest.config.js
+
+
+📦 assets:
+  - assets/**/*
+
+🗄️dependencies:
+  - package.json
+  - package-lock.json
+  - yarn.lock
+  - requirements.txt
+  - Pipfile
+  - pubspec.yaml
+
+🔌 core:
+  - lib/**/*
+  - src/**/*
