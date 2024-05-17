@@ -35,8 +35,8 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          name: Run tests
-          command: npm test
+          name: test
+          command: node test
       - codecov/upload
 
 workflows:
@@ -44,9 +44,11 @@ workflows:
       jobs:
       - build
       - test:
+          - node/test:
+              test-results-for: jest
           matrix:
             parameters:
-              node-version: ["14.x", "16.x","lts"]
+              node-version: ["14.x", "16.x","lts","latest"]
           requires:
             - build
           filters:
