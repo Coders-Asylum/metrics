@@ -35,8 +35,8 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          name: Run tests
-          command: npm test
+          name: test
+          command: node test
       - codecov/upload
 
 workflows:
@@ -46,7 +46,7 @@ workflows:
       - test:
           matrix:
             parameters:
-              node-version: ["14.x", "16.x","lts"]
+              node-version: ["18.20.2","lts","node-current"]
           requires:
             - build
           filters:
