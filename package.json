@@ -3,25 +3,22 @@
   "version": "0.0.1",
   "description": "A simple mertrics library for extracting performance metrics.",
   "main": "index.js",
+  "type": "commonjs",
   "scripts": {
-    "test": "mocha --config '.mocharc.yml'",
-    "build-ts": "tsc -p ./tsconfig.json"
+    "test": "jest --config=jest.config.ts",
+    "compile": "tsc -p ./tsconfig.json",
+    "ts-test": "cross-env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' && mocha -r ts-node/register 'tests/**/*-test.spec.ts'"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/chai": "^4.3.16",
-    "@types/mocha": "^10.0.6",
+    "@jest/globals": "^29.7.0",
     "@types/node": "latest",
-    "@types/sinon": "^17.0.3",
     "c8": "^9.1.0",
-    "chai": "^5.1.1",
     "cross-env": "^7.0.3",
-    "mocha": "^10.4.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.5",
-    "sinon": "^18.0.0"
-  },
-  "dependencies": {
+    "typescript": "^5.4.5"
   }
 }
