@@ -44,8 +44,6 @@ workflows:
       jobs:
       - build
       - test:
-          - node/test:
-              test-results-for: jest
           matrix:
             parameters:
               node-version: ["18.20.2","lts","node-current"]
