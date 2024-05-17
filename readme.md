@@ -1,5 +1,5 @@
 # Metrics
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e3b60b27ebca4575b4175229b837b341)](https://app.codacy.com/gh/Coders-Asylum/metrics/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Dependabot Updates](https://github.com/Coders-Asylum/metrics/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Coders-Asylum/metrics/actions/workflows/dependabot/dependabot-updates)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/e3b60b27ebca4575b4175229b837b341)](https://app.codacy.com/gh/Coders-Asylum/metrics/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade) [![Dependabot Updates](https://github.com/Coders-Asylum/metrics/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Coders-Asylum/metrics/actions/workflows/dependabot/dependabot-updates) [![codecov](https://codecov.io/gh/Coders-Asylum/metrics/graph/badge.svg?token=eivrHgdhep)](https://codecov.io/gh/Coders-Asylum/metrics)
 
 ## Notice
 > [!WARNING]  
