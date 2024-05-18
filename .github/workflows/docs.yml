@@ -16,30 +16,19 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
       - name: Install node
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: latest
           cache: "npm"
           cache-dependency-path: "./package-lock.json"
       - name: Install dependencies
         run: npm install
-      - name: Add github bot as user
-        run: |
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git config --global user.name "github-actions[bot]"
-      - name: Set current datetime
-        run: echo "CURRENT_DATETIME=$(date +'%Y-%m-%d:%H:%M:%S')" >> $GITHUB_ENV
       - name: Generate documentation
         run: npm run build:wiki
-      - name: Commit changes in new branch
+      - name: Run Git update
         run: |
-          export CURRENT_DATETIME=$(date +'%Y-%m-%d:%H:%M:%S')
-
-          git checkout -b bot:wiki-update_${{ env.CURRENT_DATETIME }}
-          git add .
-          git commit -a --signoff -m "docs: updated wiki by github-actions-bot on ${{ env.CURRENT_DATETIME }}"
-      - name: Push changes to repository
-        run: git push origin bot:wiki-update_$CURRENT_DATETIME
+          chmod +x .github/scripts/git-update.sh
+          bash .github/scripts/git-update.sh --branch-base bot/wiki_update_ --message "docs: updated wiki by github-actions-bot"
       - name: Create pull request
         uses: actions/github-script@v7
         id: pull-request
@@ -49,7 +38,7 @@ jobs:
                 owner: context.repo.owner,
                 repo: context.repo.repo,
                 title: '[DOCS] WIKI update',
-                head: 'bot:wiki-update_$CURRENT_DATETIME',
+                head: '{{ env.BRANCH_NAME }}',
                 base: context.ref,
                 body: 'This is an automated pull request to update the wiki.'
             })
