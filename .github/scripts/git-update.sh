@@ -42,12 +42,12 @@ now=$(date +"%Y-%m-%d %H:%M:%S")
 # current date time without space, -, :
 sanitisedNow=${now//[-: ]/}
 # export now to github env vars
-echo "CREATED_DATETIME=$now" >>$GITHUB_ENV
+echo "CREATED_DATETIME=$now" >>"$GITHUB_ENV"
 
 # create the branch base appended with current date time
 branchName="$branchBase-$sanitisedNow"
 # export branch name to github env vars
-echo "BRANCH_NAME=$branchName" >>$GITHUB_ENV
+echo "BRANCH_NAME=$branchName" >>"$GITHUB_ENV"
 
 # git config
 git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
