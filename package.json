@@ -7,7 +7,8 @@
   "scripts": {
     "test": "jest --config=jest.config.ts",
     "compile": "tsc -p ./tsconfig.json",
-    "build:doc": "typedoc --options ./tool/typedoc.json"
+    "build:doc": "typedoc --options ./tool/typedoc.json",
+    "build:wiki": "typedoc --options ./tool/typedoc.wiki.json"
   },
   "author": "",
   "license": "ISC",

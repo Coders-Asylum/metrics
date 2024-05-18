@@ -3,12 +3,11 @@
   "entryPoints": ["../index.ts", "../src/**/*"],
   "tsconfig": "../tsconfig.json",
   "entryPointStrategy": "expand",
-  "out": "../docs",
+  "out": "../docs/wiki/",
   "exclude": ["**/node_modules/**", "**/dist/**", "**/tests/**/*"],
   "hideGenerator": false,
   "readme": "../readme.md",
-  "json": "../docs/json/api.json",
-  "plugin": ["typedoc-plugin-mdn-links"],
+  "plugin": ["typedoc-plugin-mdn-links", "typedoc-plugin-markdown"],
   "sort": ["kind", "instance-first", "alphabetical", "visibility"],
   "logLevel": "Verbose"
 }
