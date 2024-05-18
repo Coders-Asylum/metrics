@@ -49,6 +49,3 @@ workflows:
               node-version: ["18.20.2","lts","latest"]
           requires:
             - build
-          filters:
-            branches:
-              only: ['main', 'Release/**/*']
