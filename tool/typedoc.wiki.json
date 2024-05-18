@@ -1,0 +1,13 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["../index.ts", "../src/**/*"],
+  "tsconfig": "../tsconfig.json",
+  "entryPointStrategy": "expand",
+  "out": "../docs/wiki/",
+  "exclude": ["**/node_modules/**", "**/dist/**", "**/tests/**/*"],
+  "hideGenerator": false,
+  "readme": "../readme.md",
+  "plugin": ["typedoc-plugin-mdn-links", "typedoc-plugin-markdown"],
+  "sort": ["kind", "instance-first", "alphabetical", "visibility"],
+  "logLevel": "Verbose"
+}

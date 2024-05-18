@@ -1,0 +1,18 @@
+changelog:
+  exclude:
+    authors:
+      - octocat
+      - Dependabot
+  categories:
+    - title: Breaking Changes 🛠
+      labels:
+        - 🚀 major-release
+        - 🚨 breaking-change
+    - title: Exciting New Features 🎉
+      labels:
+        - 🩹 patch-release
+        - ⬆️ enhancement
+        - 🚛 feature-release
+    - title: 🐛 Bug Fixes
+      labels:
+        - 🦋 bug-fix
