@@ -28,7 +28,7 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
       - name: Set current datetime
-        run: echo "CURRENT_DATETIME=$(date +'%Y-%m-%d:%H:%M:%S')" >> $GITHUB_ENV
+        run: echo "CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
       - name: Generate documentation
         run: npm run build:wiki
       - name: Commit changes in new branch
