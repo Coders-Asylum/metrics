@@ -33,7 +33,7 @@ jobs:
         run: npm run build:wiki
       - name: Commit changes in new branch
         run: |
-          export CURRENT_DATETIME=$(date +'%Y-%m-%d:%H:%M:%S')
+          export CURRENT_DATETIME=$(date +'%Y%m%d%H%M%S')
 
           git checkout -b bot:wiki-update_${{ env.CURRENT_DATETIME }}
           git add .
