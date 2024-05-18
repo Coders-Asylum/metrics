@@ -64,7 +64,7 @@ Number of weeks.
 
 #### Source
 
-[duration.ts:34](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L34)
+[duration.ts:34](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L34)
 
 ## Properties
 
@@ -74,7 +74,7 @@ Number of weeks.
 
 #### Source
 
-[duration.ts:22](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L22)
+[duration.ts:22](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L22)
 
 ## Accessors
 
@@ -92,7 +92,7 @@ The duration in days.
 
 #### Source
 
-[duration.ts:148](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L148)
+[duration.ts:148](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L148)
 
 ***
 
@@ -110,7 +110,7 @@ The duration in hours.
 
 #### Source
 
-[duration.ts:140](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L140)
+[duration.ts:140](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L140)
 
 ***
 
@@ -128,7 +128,7 @@ The duration in milliseconds.
 
 #### Source
 
-[duration.ts:116](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L116)
+[duration.ts:116](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L116)
 
 ***
 
@@ -146,7 +146,7 @@ The duration in minutes.
 
 #### Source
 
-[duration.ts:132](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L132)
+[duration.ts:132](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L132)
 
 ***
 
@@ -164,7 +164,7 @@ The duration in seconds.
 
 #### Source
 
-[duration.ts:124](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L124)
+[duration.ts:124](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L124)
 
 ***
 
@@ -182,7 +182,7 @@ The duration in weeks.
 
 #### Source
 
-[duration.ts:156](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L156)
+[duration.ts:156](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L156)
 
 ## Methods
 
@@ -206,7 +206,7 @@ A new Duration instance.
 
 #### Source
 
-[duration.ts:99](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L99)
+[duration.ts:99](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L99)
 
 ***
 
@@ -230,7 +230,7 @@ A new Duration instance.
 
 #### Source
 
-[duration.ts:90](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L90)
+[duration.ts:90](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L90)
 
 ***
 
@@ -254,7 +254,7 @@ A new Duration object.
 
 #### Source
 
-[duration.ts:63](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L63)
+[duration.ts:63](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L63)
 
 ***
 
@@ -278,7 +278,7 @@ A new Duration instance.
 
 #### Source
 
-[duration.ts:81](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L81)
+[duration.ts:81](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L81)
 
 ***
 
@@ -302,7 +302,7 @@ A new Duration instance.
 
 #### Source
 
-[duration.ts:72](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L72)
+[duration.ts:72](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L72)
 
 ***
 
@@ -326,4 +326,4 @@ A new Duration instance.
 
 #### Source
 
-[duration.ts:108](https://github.com/Coders-Asylum/metrics/blob/1a196a7c71c6ee7f33a015430fb5d19cf9f7b981/src/common/duration.ts#L108)
+[duration.ts:108](https://github.com/Coders-Asylum/metrics/blob/258926012592dfe525fb47902ba67526cb482845/src/common/duration.ts#L108)
