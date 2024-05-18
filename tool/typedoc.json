@@ -1,0 +1,14 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": ["../index.ts", "../src/**/*"],
+  "tsconfig": "../tsconfig.json",
+  "entryPointStrategy": "expand",
+  "out": "../docs",
+  "exclude": ["**/node_modules/**", "**/dist/**", ".**/tests/**/*"],
+  "hideGenerator": false,
+  "readme": "../readme.md",
+  "json": "../docs/json/api.json",
+  "plugin": ["typedoc-plugin-mdn-links"],
+  "sort": ["kind", "instance-first", "alphabetical", "visibility"],
+  "logLevel": "Verbose"
+}
