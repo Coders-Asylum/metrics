@@ -77,12 +77,12 @@ describe("Duration", function () {
     });
 
     it("should create a new Duration instance with the correct nanoseconds", () => {
-      const duration = Duration.nanoseconds(1000);
+      const duration = Duration.nanoseconds(BigInt(1000));
       expect(duration.toNanoseconds).toBe(BigInt(1000));
     });
 
     it("should create a new Duration instance with the correct microseconds", () => {
-      const duration = Duration.microseconds(1000);
+      const duration = Duration.microseconds(BigInt(1000));
       expect(duration.toMicroseconds).toBe(BigInt(1000));
     });
   });

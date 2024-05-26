@@ -41,8 +41,8 @@ class Duration {
    * @constructor
    */
   constructor({
-    microseconds = 0,
-    nanoseconds = 0,
+    microseconds = BigInt(0),
+    nanoseconds = BigInt(0),
     milliseconds = 0,
     seconds = 0,
     minutes = 0,
@@ -50,8 +50,8 @@ class Duration {
     days = 0,
     weeks = 0,
   }: {
-    nanoseconds?: number;
-    microseconds?: number;
+    nanoseconds?: bigint;
+    microseconds?: bigint;
     milliseconds?: number;
     seconds?: number;
     minutes?: number;
@@ -150,11 +150,11 @@ class Duration {
     return new Duration({ weeks: weeks });
   }
 
-  static nanoseconds(nanoSeconds: number): Duration {
+  static nanoseconds(nanoSeconds: bigint): Duration {
     return new Duration({ nanoseconds: nanoSeconds });
   }
 
-  static microseconds(microSeconds: number): Duration {
+  static microseconds(microSeconds: bigint): Duration {
     return new Duration({ microseconds: microSeconds });
   }
 
