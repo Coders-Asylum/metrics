@@ -4,7 +4,7 @@ const config: Config = {
   collectCoverage: true,
   coverageDirectory: "./coverage",
   collectCoverageFrom: ["**/*.ts", "!**/node_modules/**", "!**/dist/**", "!**/jest.config.ts","!**/tests/**"],
-  coverageReporters: ["lcov", "text-summary", "text"],
+  coverageReporters: ["lcovonly", "text-summary", "text"],
   detectLeaks: true,
   preset: "ts-jest",
   testEnvironment: "node",

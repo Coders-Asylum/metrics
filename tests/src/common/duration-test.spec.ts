@@ -1,4 +1,4 @@
-import { describe, expect, it } from "@jest/globals";
+import { describe, expect, it, jest } from "@jest/globals";
 import { Duration } from "../../../src/common/duration";
 import { toMilliseconds } from "../../helper";
 
@@ -74,6 +74,46 @@ describe("Duration", function () {
     it("should create a new Duration instance with the correct weeks", () => {
       const duration = Duration.weeks(1);
       expect(duration.toMilliseconds).toBe(toMilliseconds({ weeks: 1 }));
+    });
+
+    it("should create a new Duration instance with the correct nanoseconds", () => {
+      const duration = Duration.nanoseconds(BigInt(1000));
+      expect(duration.toNanoseconds).toBe(BigInt(1000));
+    });
+
+    it("should create a new Duration instance with the correct microseconds", () => {
+      const duration = Duration.microseconds(BigInt(1000));
+      expect(duration.toMicroseconds).toBe(BigInt(1000));
+    });
+  });
+
+  describe("Duration when exceeds max safe value", () => {
+    const warningmessage: string =
+      "[METRICS][WARN]The duration value exceeds the maximum value of a 64-bit signed integer. To get the exact value, please use 'toNanoseconds' or 'toMicroseconds' methods.";
+
+    it("should set the respective flag to true when the duration exceeds the max safe value", () => {
+      // arrange and act
+      const duration = Duration.milliseconds(Number.MAX_SAFE_INTEGER + 1);
+      // assert
+      expect(duration.exceedsMaxSafeValue).toBe(true);
+    });
+
+    it("should show a warning message when the duration exceeds the max safe value", () => {
+      // Arrange
+      console.warn = jest.fn();
+      const duration = Duration.milliseconds(Number.MAX_SAFE_INTEGER + 1);
+
+      // Act
+      duration.toMilliseconds;
+      duration.toSeconds;
+      duration.toMinutes;
+      duration.toHours;
+      duration.toDays;
+      duration.toWeeks;
+
+      // Assert
+      expect(console.warn).toHaveBeenCalledTimes(6);
+      expect(console.warn).toHaveBeenCalledWith(warningmessage);
     });
   });
 });
